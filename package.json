@@ -5,7 +5,7 @@
       "type": "git",
       "url": "https://github.com/MFait/xkcdproxy"
     },
-  "devDepedencies": {
+  "devDependencies": {
     "mocha": ">= 1.13.0"
   }
 }
