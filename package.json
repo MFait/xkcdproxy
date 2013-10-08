@@ -1,0 +1,11 @@
+{
+  "name": "xkcdproxy",
+  "version": "0.0.1",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/MFait/xkcdproxy"
+    },
+  "devDepedencies": {
+    "mocha": ">= 1.13.0"
+  }
+}
