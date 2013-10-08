@@ -1,10 +1,17 @@
 var http = require("http");
+var xkcd = require("./xkcdcontent");
 
 function start() {
 
     function onRequest(request, response) {               
         response.writeHeader(200, {"Content-Type": "text/plain"});
-        response.write("Hello!");   
+        
+        // get xkcd page
+        // parse title, alt, ...
+        // download image
+        // build html
+        
+        response.write(xkcd.raw());   
         response.end();
     }
 
