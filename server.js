@@ -11,12 +11,13 @@ function start() {
         // download image
         // build html
         
-        response.write(xkcd.raw());   
+        // response.write(xkcd.raw());   
         response.end();
     }
 
     http.createServer(onRequest).listen(8888);
     console.log("Server starded.");
 }
+
 
 exports.start = start;
