@@ -19,7 +19,9 @@ function parse(raw) {
     var img = $("#comic img")[0].attribs;
     
     return {
-        source: img.src 
+        source: img.src,
+        title: img.title,
+        alt: img.alt
     };
 }
 

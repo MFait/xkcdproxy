@@ -4,15 +4,15 @@ var xkcd = require("./xkcdcontent");
 function start() {
 
     function onRequest(request, response) {               
-        response.writeHeader(200, {"Content-Type": "text/plain"});
-        
-        // get xkcd page
-        // parse title, alt, ...
-        // download image
-        // build html
-        
-        // response.write(xkcd.raw());   
-        response.end();
+
+
+        xkcd.loadRaw(function(content) {
+            var comic = xkcd.parse(content);
+            
+            response.writeHeader(200, {"Content-Type": "text/html"});
+            response.write("<html><body><img src='" + comic.source + "'/></body></html>");    
+            response.end();
+        })    
     }
 
     http.createServer(onRequest).listen(8888);

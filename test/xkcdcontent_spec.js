@@ -26,6 +26,8 @@ describe("xkcd content", function() {
         var comic = xkcd.parse(raw)    
             
         comic.source.should.equal("http://imgs.xkcd.com/path/the-image.png");
+        comic.title.should.equal("the title");
+        comic.alt.should.equal("the alt text");
         done();
     })
     

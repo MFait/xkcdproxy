@@ -9,9 +9,10 @@ describe("xkcd proxy", function() {
         app.start();
     });
     
-    it("should return a 200", function(done) {
+    it("should return an image", function(done) {
         request.get("http://localhost:8888/", function(err, response, body) {
             response.statusCode.should.equal(200);
+            body.should.include("<img src=");
             done();
         })
     });
