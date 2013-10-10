@@ -15,6 +15,7 @@
     "nock": ">= 0.22.x"
   },
   "dependencies": {
-    "cheerio": ">= 0.12.3"
+    "cheerio": ">= 0.12.3",
+    "hamljs": "~0.6.1"
   }
 }
