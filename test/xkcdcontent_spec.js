@@ -18,7 +18,7 @@ describe("xkcd content", function() {
             '<html>' +
             '<body>' + 
             '<div id="comic">' + 
-            '<img src="http://imgs.xkcd.com/path/the-image.png" title="the title" alt="the alt text">' +
+            '<img src="http://imgs.xkcd.com/path/the-image.png" title="comic text" alt="comic title">' +
             '</div>' + 
             '</body>' +
             '</html>';
@@ -26,8 +26,8 @@ describe("xkcd content", function() {
         var comic = xkcd.parse(raw)    
             
         comic.source.should.equal("http://imgs.xkcd.com/path/the-image.png");
-        comic.title.should.equal("the title");
-        comic.alt.should.equal("the alt text");
+        comic.title.should.equal("comic title");
+        comic.text.should.equal("comic text");
         done();
     })
     

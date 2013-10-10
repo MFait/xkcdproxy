@@ -13,7 +13,7 @@ function start() {
     }
 
     http.createServer(onRequest).listen(8888);
-    console.log("Server starded.");
+    console.log("I'm listening ...");
 }
 
 exports.start = start;

@@ -20,8 +20,8 @@ function parse(raw) {
     
     return {
         source: img.src,
-        title: img.title,
-        alt: img.alt
+        title: img.alt,
+        text: img.title
     };
 }
 
