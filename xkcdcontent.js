@@ -1,5 +1,7 @@
 var request = require('request');
 var cheerio = require('cheerio');
+var entities = require('entities');
+
 
 function validResponse(error, response) {
     return !error && response.statusCode == 200;
@@ -20,8 +22,8 @@ function parse(raw) {
     
     return {
         source: img.src,
-        title: img.alt,
-        text: img.title
+        title: entities.decode(img.alt),
+        text: entities.decode(img.title)
     };
 }
 

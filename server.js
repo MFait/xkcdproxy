@@ -4,8 +4,8 @@ var http = require('http'),
 
 function start() {
 
-    function onRequest(request, response) {               
-        xkcd.loadRaw(function(content) {            
+    function onRequest(request, response) {
+        xkcd.loadRaw(function(content) {
             response.writeHeader(200, {"Content-Type": "text/html"});
             response.write(output.render(xkcd.parse(content)));    
             response.end();

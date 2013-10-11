@@ -30,5 +30,21 @@ describe("xkcd content", function() {
         comic.text.should.equal("comic text");
         done();
     })
+
+    it("should decode html entities", function(done) {
+        var raw=
+            '<html>' +
+            '<body>' +
+            '<div id="comic">' +
+            '<img src="any" title="you&#39;d just need a magnifying glass" alt="any">' +
+            '</div>' +
+            '</body>' +
+            '</html>';
+
+        var comic = xkcd.parse(raw)
+
+        comic.text.should.equal("you'd just need a magnifying glass");
+        done();
+    })
     
 });
